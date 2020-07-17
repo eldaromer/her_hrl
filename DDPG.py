@@ -3,6 +3,8 @@ from ReplayMemory import ReplayMemory
 from util import OUNoise, NormalizedEnv
 import progressbar
 import tensorflow as tf
+tf.get_logger().setLevel('ERROR')
+tf.autograph.set_verbosity(3)
 import numpy as np
 from gym.wrappers import Monitor
 
