@@ -5,10 +5,12 @@ import numpy as np
 from DDPG import DDPG
 from OptionCritic import OptionCritic
 
-env = gym.make('Pendulum-v0')
+env = gym.make('HalfCheetahBulletEnv-v0')
 
 agent = OptionCritic(env)
-agent.train(2)
+agent.train(200)
+agent.save()
+agent.record()
 
 # agent = DDPG(env, verbose=False)
 # train_hist = agent.train(5)
