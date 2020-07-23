@@ -22,6 +22,8 @@ class ReplayMemory:
 				reward = env.compute_reward(experience[5], goal, experience[6])
 				new_experience = (experience[0], experience[1], [reward], experience[3], experience[4], goal, experience[6])
 				self.buffer.push(new_experience)
+		self.temp = []
+
 
 	def sample(self, batch_size):
 		state_batch = []
